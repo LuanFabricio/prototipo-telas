@@ -7,16 +7,15 @@ function Auditor() {
 	let current_date = new Date(new Date().toLocaleDateString()).toISOString().split("T")[0];
 	
 	return (
-		<div id="auditor">
+		<div id="auditor" className="reporta-form">
 			<label>Auditor</label>
-			<select 
+			<select
 				id="auditor" 
 				value={auditor}
 				onChange={(e) => setAuditor(e.target.value)}>
 				<option value="">Escolha uma opção</option>
 				<option value="outro">Outro</option>
 			</select><br/>
-
 			<label>Setor</label>
 			<select 
 				id="setor" 

@@ -13,6 +13,12 @@ function Home() {
 			<li>
 				<Link to="/relatorio">Relatorio</Link>
 			</li>
+			<li>
+				<Link to="/login">Login</Link>
+			</li>
+			<li>
+				<Link to="/registros">Registros</Link>
+			</li>
 		</ul>
 		</center>
 	);

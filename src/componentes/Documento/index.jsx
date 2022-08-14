@@ -7,7 +7,7 @@ function Documento() {
 	const [fimInternacao, setFimInternacao] = useState("");
 
 	return (
-		<div id="documento">
+		<div id="documento" className="reporta-form">
 			<label>Tipo do documento</label>
 			<select 
 				id="tipo_documento"

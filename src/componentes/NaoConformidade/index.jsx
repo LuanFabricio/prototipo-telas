@@ -9,7 +9,7 @@ function NaoConformidade() {
 	const [setorNaoConformidade, setSetorNaoConformidade] = useState("");
 
 	return (
-		<div id="">
+		<div id="" className="reporta-form">
 			<label>Formulário</label>
 			<select 
 				id=""

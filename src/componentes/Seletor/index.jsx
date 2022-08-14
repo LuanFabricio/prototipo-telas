@@ -1,20 +1,36 @@
-function Seletor({opcoes}) {
-	const style = {
-		display: "column"
+import {useState} from "react";
+
+function Seletor({opcoes, titulo}) {
+	const [value, setValue] = useState(opcoes.map(() => true));
+
+	const changeIndexValue = (index) => {
+		let newValue = Array.from(value);
+		newValue[index] = !value[index];
+		setValue(newValue);
 	}
 
+	console.log(value);
+
 	return (
-		<div>
-		{
-			opcoes.map((val, index) => {
-				return (
-					<div style={style}>
-					<label>{val}</label>
-					<input key={index} type="checkbox"/>
-					</div>
-				);
-			})
-		}
+		<div className="col">
+			<div>
+				{titulo}
+			</div>
+			{
+				opcoes.map((val, index) => {
+					return (
+						<div 
+							key={index} 
+							onClick={() => changeIndexValue(index)}>
+						<input type="checkbox" checked={value[index]}
+							onChange={() => changeIndexValue(index)}
+							/>
+						<label
+							>{val}</label>
+						</div>
+					);
+				})
+			}
 		</div>
 	);
 }

@@ -37,7 +37,12 @@ function GraficoBarra({titulo, chartData}) {
 	console.log(chartData);
 
 	return (
-		<Bar options={options} data={chartData}/>
+		<Bar options={options} data={chartData} style={
+			{
+				maxWidth: "950px",
+				maxHeight: "650px",
+			}
+		}/>
 	);
 }
 

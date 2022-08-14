@@ -5,6 +5,13 @@ import Auditor from '../componentes/Auditor';
 import Documento from "../componentes/Documento";
 import "../App.css";
 
+const style = {
+	position: "absolute",
+	left: "50%",
+	"-webkit-transform": "translate(-50%, 0%)",
+	transform: "translate(-50%, 0%)",
+};
+
 function Reporta() {
 
 	const [quantNaoConformidades, setQuantNaoConformidades] = useState(1);
@@ -22,10 +29,10 @@ function Reporta() {
 	}
 
 	return (
-		<div className="App">
+		<div className="App" style={style}>
 		<form onSubmit={submit}>
 			<Auditor/>
-			<Documento/>
+			<Documento className="reporta-form"/>
 			<label>Quantidade de não conformidades</label>
 			<input 
 				min="1"
