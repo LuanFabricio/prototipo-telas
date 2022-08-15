@@ -13,9 +13,10 @@ function Seletor({opcoes, titulo}) {
 
 	return (
 		<div className="col">
-			<div>
+			<div className="border border-dark">
 				{titulo}
 			</div>
+			<div className="border border-dark">
 			{
 				opcoes.map((val, index) => {
 					return (
@@ -31,6 +32,7 @@ function Seletor({opcoes, titulo}) {
 					);
 				})
 			}
+			</div>
 		</div>
 	);
 }

@@ -26,9 +26,8 @@ function criaChartData(labelName, dados) {
 }
 
 function Relatorio() {
-	const funcionarios = ["funcionario1", "funcionario2", "funcionario3"];
-	const setores = ["setor1", "setor2"];
-	const auditores = ["auditor1", "auditor2"];
+	const setores = ["setor1", "setor2", "setor3"];
+	const auditores = ["auditor1", "auditor2", "auditor3"];
 
 	const funcionariosData = [
 		{
@@ -43,7 +42,8 @@ function Relatorio() {
 			name: "funcionario3",
 			value: 42
 		},
-	]
+	];
+	const funcionarios = funcionariosData.map(val => val.name);
 
 	const chartData1 = criaChartData("NCs", funcionariosData);
 
@@ -52,7 +52,7 @@ function Relatorio() {
 		datasets: [
 			{
 				label: "NCs",
-				data: [50, 3],
+				data: [50, 3, 19],
 				backgroundColor: [
 					"rgba(0, 42, 255, 1)",
 				]
@@ -65,7 +65,7 @@ function Relatorio() {
 		datasets: [
 			{
 				label: "NCs",
-				data: [11, 42],
+				data: [11, 42, 255],
 				backgroundColor: [
 					"rgba(0, 42, 255, 1)",
 				]

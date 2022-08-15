@@ -1,4 +1,5 @@
 import {useState} from "react";
+import {Link} from "react-router-dom";
 
 const style = {
 	position: "absolute",
@@ -27,7 +28,9 @@ function Login() {
 					value={password} 
 					onChange={(e) => setPassword(e.target.value)}/>
 			</div>
-			<button className="btn btn-primary btn-lg btn-block">Entrar</button>
+			<Link to="/registros">
+				<button className="btn btn-primary btn-lg btn-block">Entrar</button>
+			</Link>
 		</form>
 		</div>
 	);

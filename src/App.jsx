@@ -20,11 +20,10 @@ function App() {
 		crossOrigin="anonymous"/>
 		<BrowserRouter>
 			<Routes>
-				<Route path="/" element={<Home/>}/>
+				<Route path="/" element={<Login/>}/>
 				<Route path="/reporta" element={<Reporta/>}/>
 				<Route path="/cadastra" element={<Cadastra/>}/>
 				<Route path="/relatorio" element={<Relatorio/>}/>
-				<Route path="/login" element={<Login/>}/>
 				<Route path="/registros" element={<Registros/>}/>
 			</Routes>
 		</BrowserRouter>

@@ -1,5 +1,5 @@
 import {useState} from "react";
-// import IdMedico from '../componentes/idMedico';
+import {Link} from "react-router-dom";
 import NaoConformidade from '../componentes/NaoConformidade';
 import Auditor from '../componentes/Auditor';
 import Documento from "../componentes/Documento";
@@ -41,7 +41,7 @@ function Reporta() {
 				value={quantNaoConformidades}
 				onChange={e => setQuantNaoConformidades(e.target.value)}/><br/>
 			{componentesNC}
-			<button>Enviar</button>
+			<Link to="/registros"><button>Enviar</button></Link>
 		</form>
 		</div>
 	);
