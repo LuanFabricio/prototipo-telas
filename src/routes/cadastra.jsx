@@ -1,31 +1,41 @@
-import {useState} from "react";
+import {Link} from "react-router-dom";
+
+const style = {
+	position: "absolute",
+	top: "50%",
+	left: "50%",
+	"-webkit-transform": "translate(-50%, -50%)",
+	transform: "translate(-50%, -50%)",
+};
 
 function Cadastra() {
-	let [input, setInput] = useState("");
-
-	const submit = (event) => {
-		event.preventDefault();
-		let conformidades = localStorage.getItem("conformidades") || [];
-		if (typeof conformidades == "string") {
-			conformidades = conformidades.split(',');
-		}
-		conformidades.push(input);
-		localStorage.setItem("conformidades", conformidades.toString());
-		setInput("");
-	}
-
-	const change = (event) => {
-		setInput(event.target.value);
-	}
 
 	return (
-		<center>
-			<form onSubmit={submit}>
-				<label>Nova conformidade </label>
-				<input value={input} onChange={change}/>
-				<button>Enviar</button>
+		<div style={style}>
+			<form>
+				<div className="form-group">
+					<label className="control-label">Nova conformidade </label>
+					<input className="form-control"/>
+				</div>
+				<Link to="/registros">
+					<button className="btn btn-primary btn-block">Cadastrar</button>
+				</Link>
 			</form>
-		</center>
+			<br/>
+			<form>
+				<div className="form-group">
+					<label className="control-label">Novo nome</label>
+					<input className="form-control"/>
+				</div>
+				<select>
+					<option value="">Selecione uma conformidade</option>
+					<option value="nc1">Conformidade1</option>
+				</select>
+				<Link to="/registros">
+					<button className="btn btn-primary btn-block">Atualizar</button>
+				</Link>
+			</form>
+		</div>
 	);
 }
 

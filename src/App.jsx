@@ -9,6 +9,7 @@ import Home from "./routes/home";
 import Relatorio from "./routes/relatorio.jsx";
 import Login from "./routes/login.jsx";
 import Registros from "./routes/registros";
+import Remove from "./routes/remove.jsx";
 
 function App() {
 	return (
@@ -22,7 +23,8 @@ function App() {
 			<Routes>
 				<Route path="/" element={<Login/>}/>
 				<Route path="/reporta" element={<Reporta/>}/>
-				<Route path="/cadastra" element={<Cadastra/>}/>
+				<Route path="/cadastra_nc" element={<Cadastra/>}/>
+				<Route path="/remove_nc" element={<Remove/>}/>
 				<Route path="/relatorio" element={<Relatorio/>}/>
 				<Route path="/registros" element={<Registros/>}/>
 			</Routes>

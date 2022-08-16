@@ -29,23 +29,23 @@ function Relatorio() {
 	const setores = ["setor1", "setor2", "setor3"];
 	const auditores = ["auditor1", "auditor2", "auditor3"];
 
-	const funcionariosData = [
+	const profissionaisData = [
 		{
-			name: "funcionario1",
+			name: "profissional1",
 			value: 3
 		},
 		{
-			name: "funcionario2",
+			name: "profissional2",
 			value: 8
 		},
 		{
-			name: "funcionario3",
+			name: "profissional3",
 			value: 42
 		},
 	];
-	const funcionarios = funcionariosData.map(val => val.name);
+	const profissionais = profissionaisData.map(val => val.name);
 
-	const chartData1 = criaChartData("NCs", funcionariosData);
+	const chartData1 = criaChartData("NCs", profissionaisData);
 
 	const chartData2 = {
 		labels: setores,
@@ -76,13 +76,13 @@ function Relatorio() {
 	return (
 		<div id="container-fluid">
 			<div className="row text-center">
-				<Seletor opcoes={funcionarios} titulo="Funcionarios"/>
+				<Seletor opcoes={profissionais} titulo="Profissionais"/>
 				<Seletor opcoes={setores} titulo="Setores"/>
 				<Seletor opcoes={auditores} titulo="Auditores"/>
 			</div>
 			<div className="col-xs-1" align="center">
 				<GraficoBarra 
-					titulo="Não conformidade por funcionario" 
+					titulo="Não conformidade por profissional" 
 					chartData={chartData1}/>
 				<GraficoBarra 
 					titulo="Não conformidade por setor" 
