@@ -14,7 +14,7 @@ function Cadastra() {
 		<div style={style}>
 			<form>
 				<div className="form-group">
-					<label className="control-label">Nova conformidade </label>
+					<label className="control-label">Nova não conformidade </label>
 					<input className="form-control"/>
 				</div>
 				<Link to="/registros">
@@ -28,8 +28,8 @@ function Cadastra() {
 					<input className="form-control"/>
 				</div>
 				<select>
-					<option value="">Selecione uma conformidade</option>
-					<option value="nc1">Conformidade1</option>
+					<option value="">Selecione uma não conformidade</option>
+					<option value="nc1">NãoConformidade1</option>
 				</select>
 				<Link to="/registros">
 					<button className="btn btn-primary btn-block">Atualizar</button>

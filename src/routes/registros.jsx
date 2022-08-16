@@ -4,7 +4,7 @@ import Linha from "../componentes/Linha";
 
 function Registros() {
 
-	const colunas = ["Funcionario", "Cargo", "Setor", "Não Conformidade", "Status"];
+	const colunas = ["Profissional", "Cargo", "Setor", "Não Conformidade", "Status"];
 
 	return (
 		<table align="center">
@@ -20,10 +20,10 @@ function Registros() {
 				);
 			})
 			}
-			<Linha valores={["F1", "C1", "S1", "NC1", "resolvido"]}/>
-			<Linha valores={["F2", "C2", "S2", "NC2", "em progresso"]}/>
+			<Linha valores={["P1", "C1", "S1", "NC1", "resolvido"]}/>
+			<Linha valores={["P2", "C2", "S2", "NC2", "em progresso"]}/>
 			<th>
-				<Link to="/reporta"><button>Adicionar não conformidade</button></Link>
+				<Link to="/reporta"><button>Reportar não conformidade</button></Link>
 				<Link to="/relatorio"><button>Acessar o relatório</button></Link>
 			</th>
 			<th>

@@ -14,10 +14,10 @@ function Remove() {
 		<div style={style}>
 			<form>
 				<div className="form-group">
-					<label className="control-label">Conformidade</label>
+					<label className="control-label">Não Conformidade</label>
 					<select className="form-control">
 						<option value="">Selecione uma conformidade</option>
-						<option value="nc1">Conformidade1</option>
+						<option value="nc1">NãoConformidade1</option>
 					</select>
 				</div>
 				<Link to="/registros">
